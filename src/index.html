@@ -12,6 +12,11 @@
     <label>Host: <input type=text name=host size=12 required value="127.0.0.1"></label>
     <label>Port: <input type=number name=port required value=8081></label>
     <label>Path: <input type=text name=path size=32 required></label>
+    <p>
+      Protocol description:<br>
+      using binary frame as terminal I/O<br>
+      using text frame (only from client to server) to request resize: { resize: { cols: number, rows: number } }<br>
+      My implemention: <a href=https://www.npmjs.com/ptyd>ptyd</a>
   </fieldset>
   <fieldset>
     <legend>Style settings</legend>
