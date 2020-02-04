@@ -20,6 +20,8 @@ jobs:
       run: npm install
     - name: npm run build
       run: npm run build
+    - name: fix path
+      run: sed 's/"\//".\//g' -i dist/*.html
     - name: GitHub Pages
       uses: crazy-max/ghaction-github-pages@v1.2.5
       with:
