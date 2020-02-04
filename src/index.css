@@ -1,0 +1,178 @@
+html {
+  width: 100vw;
+  height: 100vh;
+  font-family: monospace;
+  font-size: 16px;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+button {
+  font-family: monospace;
+}
+body {
+  margin: 16px auto;
+  box-shadow: 0 3px 5px;
+  border-radius: 20px;
+  max-width: 800px;
+  padding: 10px;
+}
+
+h1 {
+  margin: -10px;
+  padding: 18px 20px;
+  margin-bottom: 10px;
+  background-color: black;
+  color: white;
+  border-radius: 20px 20px 0 0;
+  text-align: center;
+}
+
+fieldset {
+  border-radius: 10px;
+  border: solid black 2px;
+  margin: 10px 0;
+}
+
+legend {
+  background-color: black;
+  color: white;
+  padding: 2px 10px;
+  border-radius: 100px;
+}
+
+label {
+  display: flex;
+  --color: #aaa;
+  --bgcolor: #eee;
+  margin: 5px 0;
+  color: var(--color, black);
+  font-size: 14px;
+  align-items: baseline;
+}
+
+span {
+  width: 120px;
+  text-align: right;
+  padding-right: 8px;
+}
+
+label:focus-within {
+  --color: black;
+  --bgcolor: #ddd;
+}
+
+input:not([type="checkbox"]) {
+  flex: 1;
+  border: none;
+  font-family: monospace;
+  font-size: 16px;
+  box-shadow: 0 2px var(--color, black);
+  /* border-bottom: 2px solid var(--color, black); */
+  border-radius: 5px;
+  text-indent: .5em;
+  background-color: var(--bgcolor, white);
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + div {
+  width: 35px;
+  height: 20px;
+  border-radius: 100px;
+  background-color: #ccc;
+  position: relative;
+  transition: all ease .2s;
+  align-self: center;
+}
+
+input[type="checkbox"] + div:before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  background-color: #fff;
+  top: 2px;
+  left: 2px;
+  border-radius: 100px;
+  transition: all ease .2s;
+}
+
+input[type="checkbox"]:checked + div {
+  background-color: black;
+}
+
+input[type="checkbox"]:checked + div:before {
+  left: 17px;
+  background: #aaa;
+}
+
+button {
+  appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  background-color: #444;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 100px;
+  box-shadow: 0 2px 2px #ccc;
+  user-select: none;
+  transition: all ease .3s;
+}
+
+button:hover {
+  box-shadow: 0 5px 5px #aaa;
+}
+
+:focus {
+  outline: none;
+}
+
+.desc {
+  font-size: 14px;
+  text-align: start;
+  color: #555;
+  background: #eee;
+  padding: 10px;
+  margin: 0;
+  margin-top: 10px;
+  border-radius: 15px;
+}
+
+a:link {
+  display: inline-block;
+  padding: 0 5px;
+  border-radius: 5px;
+  background-color: #444;
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+a:hover {
+  background-color: #000;
+}
+a:visited {
+  color: white;
+}
+
+th {
+  background-color: #ccc;
+  font-weight: normal;
+}
+
+th, td {
+  border: 2px solid #ccc;
+}
+table {
+  overflow: hidden;
+  border-radius: 10px;
+  border-style: hidden;
+  border-collapse: collapse;
+  box-shadow: 0 0 0 2px;
+  width: 100%;
+}
+
+th, td {
+  padding: 2px 10px;
+}

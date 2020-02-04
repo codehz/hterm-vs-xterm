@@ -2,26 +2,26 @@
 <html lang=en>
 <meta charset=utf-8>
 <link rel=icon type=image/png href=favicon.png>
+<link rel=stylesheet href=index.css>
 <title>hterm.js vs xterm.js</title>
 <h1>hterm.js vs xterm.js</h1>
 <form target="_blank">
   <fieldset>
     <legend>URI For Websocket</legend>
-    <label>WS<input type=radio name=ssl value=false checked></label>
-    <label>WSS<input type=radio name=ssl value=true></label>
-    <label>Host: <input type=text name=host size=12 required value="127.0.0.1"></label>
-    <label>Port: <input type=number name=port required value=8081></label>
-    <label>Path: <input type=text name=path size=32 required></label>
-    <p>
+    <label><span>SSL: </span><input type=checkbox name=ssl value=true><div></div></label>
+    <label><span>WebSocket Host: </span><input type=text name=host required value="127.0.0.1"></label>
+    <label><span>WebSocket Port: </span><input type=number name=port required value=8081></label>
+    <label><span>WebSocket Path: </span><input type=text name=path required></label>
+    <p class=desc>
       Protocol description:<br>
       using binary frame as terminal I/O<br>
       using text frame (only from client to server) to request resize: { resize: { cols: number, rows: number } }<br>
       My implemention: <a href=https://www.npmjs.com/ptyd>ptyd</a>
   </fieldset>
   <fieldset>
-    <legend>Style settings</legend>
-    <label>Font family: <input placeholder=monospace type=text name=font-family></label>
-    <label>Font size: <input type=number name=font-size value=16 min=8 max=64 required></label>
+    <legend>Font settings</legend>
+    <label><span>Font family: </span><input placeholder=monospace type=text name=font-family></label>
+    <label><span>Font size: </span><input type=number name=font-size value=16 min=8 max=64 required></label>
   </fieldset>
   <p>
     <button formaction=hterm.html>launch hterm.js</button>
