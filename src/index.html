@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang=en>
+<meta charset=utf-8>
+<link rel=icon type=image/png href=favicon.png>
+<title>hterm.js vs xterm.js</title>
+<h1>hterm.js vs xterm.js</h1>
+<form target="_blank">
+  <fieldset>
+    <legend>URI For Websocket</legend>
+    <label>WS<input type=radio name=ssl value=false checked></label>
+    <label>WSS<input type=radio name=ssl value=true></label>
+    <label>Host: <input type=text name=host size=12 required value="127.0.0.1"></label>
+    <label>Port: <input type=number name=port required value=8081></label>
+    <label>Path: <input type=text name=path size=32 required></label>
+  </fieldset>
+  <fieldset>
+    <legend>Style settings</legend>
+    <label>Font family: <input placeholder=monospace type=text name=font-family></label>
+    <label>Font size: <input type=number name=font-size value=16 min=8 max=64 required></label>
+  </fieldset>
+  <p>
+    <button formaction=hterm.html>launch hterm.js</button>
+    <button formaction=xterm.html name=dom>launch xterm.js(DOM)</button>
+    <button formaction=xterm.html name=canvas>launch xterm.js(Canvas)</button>
+    <button formaction=xterm.html name=webgl>launch xterm.js(WebGL)</button>
+</form>
+<p>Basic Information:</p>
+<table>
+  <thead>
+    <tr>
+      <th>
+      <th>hterm.js
+      <th>xterm.js
+  <tbody>
+    <tr>
+      <td>Homepage
+      <td><a href=https://hterm.org>hterm.org</a>
+      <td><a href=https://xtermjs.org>xtermjs.org</a>
+    <tr>
+      <td>Author
+      <td><a href=https://chromium.googlesource.com/apps/libapps/+/master/hterm/doc/AUTHORS.md>Google</a>
+      <td>See <a href=https://github.com/xtermjs/xterm.js/graphs/contributors>contributors</a>
+    <tr>
+      <td>Bundle size
+      <td>663K (171K gz)
+      <td>256K (58K gz)
+    <tr>
+      <td>NPM package in use
+      <td><a href=https://www.npmjs.com/hterm-esm>hterm-esm</a>
+      <td><a href=https://www.npmjs.com/xterm>xterm</a>
+    <tr>
+      <td>Dependencies
+      <td>None
+      <td>None
+</table>
+<p><a href="http://validator.w3.org/check/referer" rel="nofollow" title="Validate as HTML5">HTML5</a>
