@@ -6,25 +6,24 @@ import { Connection, rendererType, fontFamily, fontSize } from "./utils"
 
 import "xterm/css/xterm.css"
 const term = new Terminal({
-  rendererType: rendererType === "webgl" ? undefined : rendererType,
+  rendererType: rendererType === "webgl" ? "canvas" : rendererType,
   cursorBlink: true,
   fontFamily: fontFamily ?? "monospace",
   fontSize
 })
+
+document.title = `xterm(${rendererType})`
+
+term.open(document.querySelector("#terminal"))
 
 if (rendererType === "webgl") {
   const gl = new WebglAddon()
   term.loadAddon(gl)
 }
 
-document.title = `xterm(${rendererType})`
-
 const fit = new FitAddon()
 term.loadAddon(fit)
-
-requestAnimationFrame(() => fit.fit())
-
-term.open(document.querySelector("#terminal"))
+fit.fit()
 
 new Connection(con => {
   term.onData(data => {
