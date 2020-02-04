@@ -11,7 +11,7 @@ export const url = `${ssl ? "wss" : "ws"}://${host}:${port}/${path}`;
 
 export const rendererType: "dom" | "webgl" | "canvas" = params.get("dom") === ""
   ? "dom"
-  : params.get("webgl")
+  : params.get("webgl") === ""
   ? "webgl"
   : "canvas"
 
