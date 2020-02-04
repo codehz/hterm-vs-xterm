@@ -9,6 +9,9 @@ lib.init(() => {
   term.getPrefs().set("font-size", fontSize)
   term.decorate(document.querySelector("#terminal"));
   term.installKeyboard();
+  term.setWindowTitle = (title) => {
+    document.title = `hterm - ${title}`
+  }
 
   new Connection(con => {
     console.log("!")

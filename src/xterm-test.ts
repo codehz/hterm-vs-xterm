@@ -17,6 +17,8 @@ if (rendererType === "webgl") {
   term.loadAddon(gl)
 }
 
+document.title = `xterm(${rendererType})`
+
 const fit = new FitAddon()
 term.loadAddon(fit)
 
@@ -33,6 +35,9 @@ new Connection(con => {
   })
   term.onResize(({cols, rows}) => {
     con.resize(cols, rows)
+  })
+  term.onTitleChange(title => {
+    document.title = `xterm(${rendererType}) - ${title}`
   })
   con.resize(term.cols, term.rows)
   term.focus()
