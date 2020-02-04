@@ -14,7 +14,6 @@ lib.init(() => {
   }
 
   new Connection(con => {
-    console.log("!")
     const io = term.io.push();
     io.onVTKeystroke = io.sendString = data => con.sendString(data)
     io.onTerminalResize = (cols, rows) => con.resize(cols, rows)
